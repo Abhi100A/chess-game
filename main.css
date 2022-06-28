@@ -1,0 +1,204 @@
+*{
+    box-sizing: border-box;
+    font-family: 'Noto Serif', serif;
+}
+
+body{
+    display:flex;
+    flex-direction: column;
+    margin-top: 5vh;
+    align-content: center;
+    justify-content: space-between;
+    background-image: url(images/background.jpg);
+}
+
+/* modal styling */
+#pawn-promote-mod{
+   
+    display:none;
+    position: absolute;
+    z-index: 1;
+    width: 100vw;
+    height:100vh;
+    overflow:auto;
+    background-color: rgba(0,0,0,0.5);
+    top:0;
+    left:0;
+    bottom:0;
+}
+#white-pick{
+    
+    display:flex;
+    align-items: center;
+    justify-content: space-around;
+    background-color: Linen;
+    width: 40vw;
+    height: 30vh;
+    margin: 25vw 25vw 25vw 30vw;  
+}
+#b-pawn-promote-mod{
+   
+    display:none;
+    position: absolute;
+    z-index: 1;
+    width: 100vw;
+    height:100vh;
+    overflow:auto;
+    background-color: rgb(0,255,255)	
+;
+    top:0;
+    left:0;
+    bottom:0;
+}
+#black-pick{
+    
+    display:flex;
+    align-items: center;
+    justify-content: space-around;
+    background-color: beige;
+    width: 40vw;
+    height: 30vh;
+    margin: 25vw 25vw 25vw 30vw;  
+}
+#white-queen-btn{
+    width: 60px;
+    height: 60px;
+    background-image: url(images/White-queen.png);
+}
+#white-rook-btn{
+    width: 60px;
+    height: 60px;
+    background-image: url(images/White-rook.png);
+}
+#white-bishop-btn{
+    width: 60px;
+    height: 60px;
+    background-image: url(images/White-bishop.png);
+}
+#white-knight-btn{
+    width: 60px;
+    height: 60px;
+    background-image: url(images/White-knight.png);
+    
+}
+#black-queen-btn{
+    width: 60px;
+    height: 60px;
+    background-image: url(images/Black-queen.png);
+}
+#black-rook-btn{
+    width: 60px;
+    height: 60px;
+    background-image: url(images/Black-rook.png);
+}
+#black-bishop-btn{
+    width: 60px;
+    height: 60px;
+    background-image: url(images/Black-bishop.png);
+}
+
+#black-knight-btn{
+    width: 60px;
+    height: 60px;
+    background-image: url(images/Black-knight.png);   
+}
+
+
+/* end modal styling */
+h1{
+    text-align: center;
+    background-color: beige;
+    
+}
+#wrapper{
+    display:flex;
+    margin-top: 5vh;
+    padding: 5px;
+    /* align-items: center; */
+    justify-content: space-around;
+}
+
+table{   
+    width: 480px;
+    height: 480px;
+    border-spacing: 0;
+    border-collapse: collapse;
+    border: 1px solid black; 
+}
+
+.white-square{
+    width: 60px;
+    height: 60px;
+    background-color: white;
+    background-size:contain;
+    padding: 0;
+    margin: 0;   
+}
+
+.black-square{
+    width: 60px;
+    height: 60px;
+    background-color: rgb(0 109 183);
+    background-size: contain;
+    padding: 0;
+    margin: 0; 
+}
+
+#big-div{
+    display:flex;
+    align-items: center;
+    flex-direction: column; 
+    width: 20vw;
+    height: 80vh;
+    background-color: beige;
+}
+
+.player-box{
+    display:flex;
+    align-items: center;
+    width: 80%;
+    justify-content: space-evenly;
+    background-color: beige;   
+}
+
+ button{ 
+    border-radius: 50px;
+    width: 30px;
+    height: 30px;
+    padding: 0;   
+}
+
+#white-button{
+    background-color: red;
+}
+
+ul{
+    list-style: none;
+}
+
+@media only screen and (max-width: 780px) {
+    table{   
+        width: 240px;
+        height: 240px;
+        border-spacing: 0;
+        border-collapse: collapse;
+        border: 1px solid black;
+    }
+    .white-square{
+        width: 30px;
+        height: 30px;
+        background-color: white;
+        background-size:contain;
+        padding: 0;
+        margin: 0;
+        
+    }
+    .black-square{
+        width: 30px;
+        height: 30px;
+        background-color: rgb(0 109 183);
+        background-size: contain;
+        padding: 0;
+        margin: 0; 
+    }
+}

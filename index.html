@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="main.css">
+    <script defer src="js/classes.js"></script>
+    <script defer src="js/BOARD_OBJ.js"></script>
+    <script defer src="js/main.js"></script>
+    <script defer src="js/styles.js"></script>
+    <link href="https://fonts.googleapis.com/css?family=Noto+Serif" rel="stylesheet">
+
+    <title>Chess</title>
+</head>
+<body>
+<!-- modal -->
+<div id ="pawn-promote-mod">
+    <div id="white-pick" class="pick-piece">
+        <button id="white-queen-btn"></button>
+        <button id="white-rook-btn"></button>
+        <button id ="white-bishop-btn"></button>
+        <button id="white-knight-btn"></button>
+    </div>
+</div>
+<div id = "b-pawn-promote-mod">
+    <div id="black-pick" class="pick-piece">
+        <button id="black-queen-btn"></button>
+        <button id="black-rook-btn"></button>
+        <button id ="black-bishop-btn"></button>
+        <button id="black-knight-btn"></button>
+    </div>
+</div>
+<!-- end modal -->
+
+<h1>JADDO CHESS GAME</h1>
+    <div id="wrapper">
+        <div id='big-div'>
+            <div class="player-box" id="white-box"> 
+                <button disabled id="white-button"></button> 
+                <h2>White</h2>        
+            </div>
+            <ul>
+                <li id='white-dead-pieces'></li>
+            </ul>
+        </div>
+        
+        
+        <table>
+            <tbody id="board">
+                <tr id="r8">
+                    <td class="white-square" id="sq-0"></td>
+                    <td class="black-square" id="sq-1"></td>
+                    <td class="white-square" id="sq-2"></td>
+                    <td class="black-square" id="sq-3"></td>
+                    <td class="white-square" id="sq-4"></td>
+                    <td class="black-square" id="sq-5"></td>
+                    <td class="white-square" id="sq-6"></td>
+                    <td class="black-square" id="sq-7"></td>   
+                </tr>
+                <tr id="r7">
+                    <td class="black-square" id="sq-8"></td>
+                    <td class="white-square" id="sq-9"></td>
+                    <td class="black-square" id="sq-10"></td>
+                    <td class="white-square" id="sq-11"></td>
+                    <td class="black-square" id="sq-12"></td>
+                    <td class="white-square" id="sq-13"></td>
+                    <td class="black-square" id="sq-14"></td>
+                    <td class="white-square" id="sq-15"></td>   
+                </tr>
+                <tr id="r6">
+                    <td class="white-square" id="sq-16"></td>
+                    <td class="black-square" id="sq-17"></td>
+                    <td class="white-square" id="sq-18"></td>
+                    <td class="black-square" id="sq-19"></td>
+                    <td class="white-square" id="sq-20"></td>
+                    <td class="black-square" id="sq-21"></td>
+                    <td class="white-square" id="sq-22"></td>
+                    <td class="black-square" id="sq-23"></td>   
+                </tr>
+                <tr id="r5">
+                    <td class="black-square" id="sq-24"></td>
+                    <td class="white-square" id="sq-25"></td>
+                    <td class="black-square" id="sq-26"></td>
+                    <td class="white-square" id="sq-27"></td>
+                    <td class="black-square" id="sq-28"></td>
+                    <td class="white-square" id="sq-29"></td>
+                    <td class="black-square" id="sq-30"></td>
+                    <td class="white-square" id="sq-31"></td>   
+                </tr>
+                <tr id="r4">
+                    <td class="white-square" id="sq-32"></td>
+                    <td class="black-square" id="sq-33"></td>
+                    <td class="white-square" id="sq-34"></td>
+                    <td class="black-square" id="sq-35"></td>
+                    <td class="white-square" id="sq-36"></td>
+                    <td class="black-square" id="sq-37"></td>
+                    <td class="white-square" id="sq-38"></td>
+                    <td class="black-square" id="sq-39"></td>   
+                </tr>
+                <tr id="r3">
+                    <td class="black-square" id="sq-40"></td>
+                    <td class="white-square" id="sq-41"></td>
+                    <td class="black-square" id="sq-42"></td>
+                    <td class="white-square" id="sq-43"></td>
+                    <td class="black-square" id="sq-44"></td>
+                    <td class="white-square" id="sq-45"></td>
+                    <td class="black-square" id="sq-46"></td>
+                    <td class="white-square" id="sq-47"></td>   
+                </tr>
+                <tr id="r2">
+                    <td class="white-square" id="sq-48"></td>
+                    <td class="black-square" id="sq-49"></td>
+                    <td class="white-square" id="sq-50"></td>
+                    <td class="black-square" id="sq-51"></td>
+                    <td class="white-square" id="sq-52"></td>
+                    <td class="black-square" id="sq-53"></td>
+                    <td class="white-square" id="sq-54"></td>
+                    <td class="black-square" id="sq-55"></td>   
+                </tr>
+                <tr id="r1">
+                    <td class="black-square" id="sq-56"></td>
+                    <td class="white-square" id="sq-57"></td>
+                    <td class="black-square" id="sq-58"></td>
+                    <td class="white-square" id="sq-59"></td>
+                    <td class="black-square" id="sq-60"></td>
+                    <td class="white-square" id="sq-61"></td>
+                    <td class="black-square" id="sq-62"></td>
+                    <td class="white-square" id="sq-63"></td>   
+                </tr>
+                
+                
+            </tbody>
+        </table>
+
+        <div id='big-div'>
+                <div class="player-box" id="black-box">  
+                    <button disabled id="black-button"></button>
+                    <h2>Black</h2>        
+                </div>
+                <ul>
+                    <li id='black-dead-pieces'></li>
+            </ul>
+            </div>
+
+    </div>
+</body>
+</html>
